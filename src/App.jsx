@@ -4,21 +4,23 @@ import './App.css'
 import Crds from './components/Crds'
 import Hdr from './components/Hdr'
 import GameDetail from './components/GameDetail'
+import PgDetails from './components/pgdetails'
 
 function App() {
   const [selectedGame, setSelectedGame] = useState(null)
+  const [page, setPage] = useState('home')
 
   return (
     <>
-      <Nvbr />
-      <div style={{ padding: '0rem' }}>
-      
-      </div>
-      <Hdr/>
-      {selectedGame ? (
+      <Nvbr onDetailsClick={() => { setPage('details'); setSelectedGame(null) }} onHomeClick={() => setPage('home')} />
+      <div style={{ padding: '0rem' }} />
+      <Hdr />
+      {page === 'details' ? (
+        <PgDetails />
+      ) : selectedGame ? (
         <GameDetail game={selectedGame} onBack={() => setSelectedGame(null)} />
       ) : (
-        <Crds onViewDetails={setSelectedGame} />
+        <Crds onViewDetails={(game) => { setSelectedGame(game); setPage('home') }} />
       )}
     </>
   )

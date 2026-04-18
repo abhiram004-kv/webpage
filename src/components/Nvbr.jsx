@@ -3,7 +3,7 @@ import { Navbar, Nav, Container, Form, Button } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './Nvbr.css'
 
-function Nvbr() {
+function Nvbr({ onDetailsClick, onHomeClick }) {
   const [searchInput, setSearchInput] = useState('')
 
   const handleSearch = (e) => {
@@ -45,13 +45,13 @@ function Nvbr() {
           </Form>
 
           <Nav className="ms-auto nav-links">
-            <Nav.Link href="#games" className="nav-link-custom">
+            <Nav.Link onClick={onHomeClick} className="nav-link-custom">
               Home
             </Nav.Link>
-            <Nav.Link href="#games" className="nav-link-custom">
+            <Nav.Link onClick={onHomeClick} className="nav-link-custom">
               Browse
             </Nav.Link>
-            <Nav.Link href="#details" className="nav-link-custom">
+            <Nav.Link onClick={onDetailsClick} className="nav-link-custom">
               Details
             </Nav.Link>
             <Button variant="outline-light" className="profile-btn ms-2">

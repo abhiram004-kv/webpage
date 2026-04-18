@@ -89,7 +89,7 @@ function Crds({ onViewDetails }) {
   ]
 
   return (
-    <Container fluid className="games-container py-5">
+    <Container id="games" fluid className="games-container py-5">
       <h2 className="games-title text-center mb-5">🎮 Featured Games</h2>
       <Row className="g-4">
         {games.map((game) => (

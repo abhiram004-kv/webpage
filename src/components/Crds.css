@@ -44,6 +44,13 @@
   animation: float 3s ease-in-out infinite;
 }
 
+.game-image-container img.game-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: none;
+}
+
 @keyframes float {
   0%, 100% {
     transform: translateY(0px);

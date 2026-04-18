@@ -18,7 +18,7 @@ function Nvbr() {
         <Navbar.Brand href="/" className="brand-text fw-bold">
           🎮 GAME CENTER
         </Navbar.Brand>
-        <p className="brand-caption" style={{color:"whitesmoke"}}>A book about games</p>
+        <p className="brand-caption" style={{color:"#5c29bbd8"}}>A book about games</p>
 
         {/* Toggle for mobile */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

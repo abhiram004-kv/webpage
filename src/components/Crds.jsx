@@ -2,13 +2,15 @@ import React from 'react'
 import { Container, Row, Col, Card, Button  , Collapse} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './Crds.css'
+import eldenring from '../assets/games/eldenring.jpg'
+
 
 function Crds() {
   const games = [
     {
       id: 1,
       title: 'Elden Ring',
-      image: '🎮',
+      image: eldenring,
       category: 'Action RPG',
       description: 'An epic fantasy world created by Hidetaka Miyazaki and George R. R. Martin.'
     },

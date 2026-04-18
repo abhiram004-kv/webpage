@@ -45,13 +45,13 @@ function Nvbr({ onDetailsClick, onHomeClick }) {
           </Form>
 
           <Nav className="ms-auto nav-links">
-            <Nav.Link onClick={onHomeClick} className="nav-link-custom">
+            <Nav.Link href="#games" onClick={onHomeClick} className="nav-link-custom">
               Home
             </Nav.Link>
-            <Nav.Link onClick={onHomeClick} className="nav-link-custom">
+            <Nav.Link href="#games" onClick={onHomeClick} className="nav-link-custom">
               Browse
             </Nav.Link>
-            <Nav.Link onClick={onDetailsClick} className="nav-link-custom">
+            <Nav.Link href="#details" onClick={onDetailsClick} className="nav-link-custom">
               Details
             </Nav.Link>
             <Button variant="outline-light" className="profile-btn ms-2">

@@ -10,9 +10,22 @@ function App() {
   const [selectedGame, setSelectedGame] = useState(null)
   const [page, setPage] = useState('home')
 
+  const scrollToGames = () => {
+    const target = document.getElementById('games')
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
+  const handleHomeClick = () => {
+    setSelectedGame(null)
+    setPage('home')
+    setTimeout(scrollToGames, 50)
+  }
+
   return (
     <>
-      <Nvbr onDetailsClick={() => { setPage('details'); setSelectedGame(null) }} onHomeClick={() => setPage('home')} />
+      <Nvbr onDetailsClick={() => { setPage('details'); setSelectedGame(null) }} onHomeClick={handleHomeClick} />
       <div style={{ padding: '0rem' }} />
       <Hdr />
       {page === 'details' ? (

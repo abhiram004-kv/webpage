@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Col, Card, Button  , Collapse} from 'react-bootstrap'
+import { Container, Row, Col, Card, Button } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './Crds.css'
 import eldenring from "../assets/games/eldenring.jpg"
@@ -12,65 +12,79 @@ import cod from "../assets/games/cod.jpg"
 import ffvii from "../assets/games/ffvii.jpg"
 import hogwartslegacy from "../assets/games/hogwartslegacy.jpg"
 
-function Crds() {
+function Crds({ onViewDetails }) {
   const games = [
     {
       id: 1,
       title: 'Elden Ring',
       image: eldenring,
       category: 'Action RPG',
-      description: 'An epic fantasy world created by Hidetaka Miyazaki and George R. R. Martin.'
+      description: 'An epic fantasy world created by Hidetaka Miyazaki and George R. R. Martin.',
+      price: '₹4,999'
     },
     {
       id: 2,
       title: 'Cyberpunk 2077',
       image: cyberpunk,
       category: 'RPG',
-      description: 'An open-world action-adventure story set in the megalopolis of Night City.'
+      description: 'An open-world action-adventure story set in the megalopolis of Night City.',
+      price: '₹3,499'
     },
     {
       id: 3,
       title: 'The Legend of Zelda',
       image: thelegendofzelda,
       category: 'Adventure',
-      description: 'Explore the vast kingdom of Hyrule and discover ancient secrets.'
+      description: 'Explore the vast kingdom of Hyrule and discover ancient secrets.',
+      price: '₹4,999'
     },
     {
       id: 4,
       title: 'Fortnite',
       image: fortnite,
       category: 'Battle Royale',
-      description: 'A free-to-play Battle Royale game with multiple game modes.'
+      description: 'A free-to-play Battle Royale game with multiple game modes.',
+      price: 'Free'
     },
     {
       id: 5,
       title: 'God of War',
       image: godofwar,
-      category: 'Action'
+      category: 'Action',
+      description: 'Embark on an emotional journey with Kratos and Atreus in Norse mythology.',
+      price: '₹3,999'
     },
     {
       id: 6,
       title: 'Minecraft',
       image: minecraft,
-      category: 'Sandbox'
+      category: 'Sandbox',
+      description: 'Build, explore, and survive in a blocky world of endless possibilities.',
+      price: '₹1,299'
     },
     {
       id: 7,
       title: 'Call of Duty',
       image: cod,
-      category: 'FPS'
+      category: 'FPS',
+      description: 'Experience intense multiplayer action and thrilling campaigns.',
+      price: '₹4,499'
     },
     {
       id: 8,
       title: 'Final Fantasy VII',
       image: ffvii,
-      category: 'JRPG'
+      category: 'JRPG',
+      description: 'A classic RPG with unforgettable characters and a compelling story.',
+      price: '₹2,999'
     },
     {
       id: 9,
       title: 'Hogwarts Legacy',
       image: hogwartslegacy,
-      category: 'Fantasy RPG'
+      category: 'Fantasy RPG',
+      description: 'Live the wizarding world as you create your own story at Hogwarts.',
+      price: '₹3,999'
     }
   ]
 
@@ -91,21 +105,10 @@ function Crds() {
               <Card.Body className="d-flex flex-column">
                 <Card.Title className="game-title">{game.title}</Card.Title>
                 <p className="game-category mb-2">{game.category}</p>
-                <p className="game-price mb-3">{game.price}</p>
                 <div className="button-group mt-auto">
-                  <Button className="btn-view me-2"
-                  data-bs-toggle="collapse"
-                  data-bs-target={`#game-details-${game.id}`}
-                  aria-expanded="false"
-                  >
+                  <Button className="btn-view me-2" onClick={() => onViewDetails(game)}>
                     View Details
                   </Button>       
-                </div>
-                <div className='collapse mt-2' id={`game-details-${game.id}`}>
-                  {/* <p className="game-description">{game.description}</p> */}
-                  <div className='card card-body bg-dark text-white border-warning'>
-
-                  </div>
                 </div>
               </Card.Body>
             </Card>

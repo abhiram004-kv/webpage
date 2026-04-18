@@ -1,0 +1,35 @@
+.game-detail {
+  background-color: black;
+  color: white;
+  height: 100vh;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.game-detail-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #ff6b00;
+}
+
+.game-category {
+  font-style: italic;
+  color: #a14900b0;
+}
+
+.game-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #a14900b0;
+}
+
+.game-price {
+  font-weight: bold;
+  color: #ff6b00;
+}
+
+.game-price {
+  font-weight: bold;
+  color: #28a745;
+}
